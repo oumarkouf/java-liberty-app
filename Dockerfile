@@ -12,3 +12,5 @@ COPY --from=builder --chown=1001:0 src/main/liberty/config/ /config/
 COPY --from=builder --chown=1001:0 target/*.war /config/apps/
 
 RUN configure.sh
+
+EXPOSE 9080
